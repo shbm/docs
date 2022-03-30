@@ -23,7 +23,7 @@ export function Question(props: PropsWithChildren<{
 
     if (unselected || props.value === undefined) {
         return (
-            <div className="question-box">
+            <div key="question-box" className="question-box">
                 <div className="question-box-text">
                     {typeof props.question === "string" ? props.question : props.question()}
                 </div>
@@ -45,7 +45,7 @@ export function Question(props: PropsWithChildren<{
         };
         return (
             <>
-                <div className="question-box-submitted-container">
+                <div key="question-box-submitted" className="question-box-submitted-container">
                     <div
                         style={{
                             width: "17px",

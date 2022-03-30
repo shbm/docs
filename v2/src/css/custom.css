@@ -498,11 +498,13 @@ html[data-theme="dark"] .app-info-form-container > *,
 html[data-theme="dark"] .app-info-form-question-container > *,
 html[data-theme="dark"] .question-box-submitted > *,
 html[data-theme="dark"] .question-box,
-html[data-theme="dark"] .tabs-container div[role="tabpanel"] {
+html[data-theme="dark"] .tabs-container div[role="tabpanel"],
+html[data-theme="dark"] .snippet-config-form-container > * {
   opacity: 0;
-  -webkit-animation: .2s content-fade-in .1s forwards;
-  -moz-animation: .2s content-fade-in .1s forwards;
-  animation: .2s content-fade-in .1s forwards;
+  --content-fade-in-animation: .4s content-fade-in .1s forwards;
+  -webkit-animation: var(--content-fade-in-animation);
+  -moz-animation: var(--content-fade-in-animation);
+  animation: var(--content-fade-in-animation);
 }
 
 @-webkit-keyframes content-fade-in {

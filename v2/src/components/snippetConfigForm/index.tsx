@@ -88,7 +88,7 @@ export default class SnippetConfigForm<T extends keyof any> extends React.PureCo
 
   render() {
     return (
-      <div>
+      <div className="snippet-config-form-container">
         {this.props.questions.map((questionInfo, ind) => {
           return (
             <Question
