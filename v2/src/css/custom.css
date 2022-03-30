@@ -490,3 +490,35 @@ html[data-theme="dark"] .tabs-container div[role="tabpanel"] div[class^="codeBlo
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
+
+/* animations */
+html[data-theme="dark"] .markdown,
+html[data-theme="dark"] ul.table-of-contents,
+html[data-theme="dark"] .app-info-form-container > *,
+html[data-theme="dark"] .app-info-form-question-container > *,
+html[data-theme="dark"] .question-box-submitted > *,
+html[data-theme="dark"] .question-box,
+html[data-theme="dark"] .tabs-container div[role="tabpanel"] {
+  opacity: 0;
+  -webkit-animation: .2s content-fade-in .1s forwards;
+  -moz-animation: .2s content-fade-in .1s forwards;
+  animation: .2s content-fade-in .1s forwards;
+}
+
+@-webkit-keyframes content-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes content-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

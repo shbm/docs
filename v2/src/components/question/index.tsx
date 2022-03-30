@@ -40,7 +40,7 @@ export function Question(props: PropsWithChildren<{
 
     if (selectedAnsTitle === undefined) {
         return (
-            <div className="question-box">
+            <div key="question-box" className="question-box">
                 <div className="question-box-text">
                     {typeof props.question === "string" ? props.question : props.question()}
                 </div>
@@ -68,7 +68,7 @@ export function Question(props: PropsWithChildren<{
             }
         });
         return (
-            <>
+            <div className="question-box-submitted" key="question-box-submitted">
                 <div className="question-box-submitted-container">
                     <div
                         style={{
@@ -97,7 +97,7 @@ export function Question(props: PropsWithChildren<{
                     </div>
                 </div>
                 {childrenComponent}
-            </>
+            </div>
         );
     }
 }
